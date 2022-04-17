@@ -77,7 +77,19 @@ bash mtproxy.sh restart
 rm -rf /home/mtproxy
 ```
 
+## 开机启动
 
+```bash
+chmod 755 /home/mtproxy/mtproxy.sh
+
+vi /etc/crontab
+
+## 加入下面这条命令后保存即可；
+
+@reboot root nohup bash /home/mtproxy/mtproxy.sh start > /dev/null 2>&1 &
+```
+
+```
 
 ## 开机启动
 
@@ -87,5 +99,7 @@ rm -rf /home/mtproxy
 
 ```bash
 cd /home/mtproxy && bash mtproxy.sh start > /dev/null 2>&1 &
+```
+
 ```
 
