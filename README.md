@@ -77,7 +77,7 @@ bash mtproxy.sh restart
 rm -rf /home/mtproxy
 ```
 
-## 开机启动
+## 开机启动方法一
 
 ```bash
 chmod 755 /home/mtproxy/mtproxy.sh
@@ -89,9 +89,8 @@ vi /etc/crontab
 @reboot root nohup bash /home/mtproxy/mtproxy.sh start > /dev/null 2>&1 &
 ```
 
-```
 
-## 开机启动
+## 开机启动方法二
 
 开机启动脚本，如果你的rc.local文件不存在请检查开机自启服务。
 
@@ -101,5 +100,4 @@ vi /etc/crontab
 cd /home/mtproxy && bash mtproxy.sh start > /dev/null 2>&1 &
 ```
 
-```
 
